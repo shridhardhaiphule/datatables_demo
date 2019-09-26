@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  ENV['SECRET_KEY_BASE'] ="4e4d8bb4918bf922a58e945eb0b6980b7f277e95251d5fc9776605b37725ebda70168f1197cdef2ad67f9ff02498b134daec04b83036ed7849331ab12e00bec4"
+  ENV['RAILS_SERVE_STATIC_FILES']=true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -26,7 +29,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
